@@ -116,7 +116,7 @@ body.welcomePage{
     border-radius: 10px;
 }
 
-.namePopUp{
+.popUp{
     width: 350px;
     background: #8c5831;
     border-radius: 10px;
@@ -124,10 +124,10 @@ body.welcomePage{
     top: 50%;
     left: 50%;
     padding: 25px 8px;
-    transform: translate(-50%, -50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(1);
     border: 3px solid #52251b;
     text-align: center;
-    visibility: hidden;
+    
     transition: transform 0.4s;
     z-index: 999;
 }
@@ -150,7 +150,7 @@ body.welcomePage{
     z-index: 998;
 }
 
-.namePopUp h3{
+.popUp h3{
     margin: 0;
     line-height: 1;
     font-size: 1.2rem;
@@ -161,6 +161,27 @@ body.welcomePage{
     color: #fff5f1;
     text-align: left;
     padding-left: 42px;
+}
+
+.popUp h4{
+    margin: 0;
+    line-height: 1;
+    font-size: 2.5rem;
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    color: #fff5f1;
+    text-shadow: 3px 3px 0px #3c0d03;
+}
+
+.popUp p{
+    font-size: 1.2rem;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff5f1;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 input{
@@ -177,7 +198,7 @@ input{
     margin-bottom: 20px;
 }
 
-.namePopUp button{
+.popUp button{
     display: inline-block;
     padding: 0px 30px;
     border-radius: 10px;
@@ -191,7 +212,7 @@ input{
     font-weight: 600;
 }
 
-.namePopUp button:hover{
+.popUp button:hover{
     transform: rotate(-3deg);
     background-color: #000000;;
 }
