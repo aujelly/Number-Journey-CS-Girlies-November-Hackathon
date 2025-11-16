@@ -25,14 +25,14 @@ function typeText(text, element){
 }
 
 playButton.addEventListener('click', function() {
-  if (sound.paused) {
-    sound.play();
+  if (sound.volume === 0) {
+    sound.volume = 1;
     //change the icon to pause
-    playButton.className = 'fas fa-pause';
+    playButton.className = "fa-solid fa-volume-high";
   } else {
-    sound.pause();
+    sound.volume = 0;
     //change the icon to play
-    playButton.className = 'fas fa-play';
+    playButton.className = "fa-solid fa-volume-xmark";
   }
 });
 typeText(welcomeText, welcome);
