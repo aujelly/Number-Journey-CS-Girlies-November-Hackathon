@@ -100,10 +100,26 @@ body .welcomePage{
     line-height: 1.5;
 }
 
+#playButton {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #471305;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    color: #fff8e6;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
 @media (max-width: 1030px) {
     .welcomeText {
         font-size: 1rem;
-        top: 35%;
+        top: 31%;
         right: 7%;
     }
 }
