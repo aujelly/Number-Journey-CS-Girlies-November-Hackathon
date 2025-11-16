@@ -1,5 +1,6 @@
 // START PAGE
-clickSound = new Audio("audios/pickSoundEffect.mp3");
+const clickSound = new Audio("audios/pickSoundEffect.mp3");
+clickSound.preload = "auto";
 
 // WELCOME PAGE
 // welcome text
@@ -48,7 +49,7 @@ function chooseOpenPopUp(){
             // wait 1.5s befor opening the pop up
             setTimeout(() => {
                 openChapterPopUp();
-            }, 1500);
+            }, 1200);
         }
 }
 
@@ -69,7 +70,15 @@ playButton.addEventListener('click', function() {
 
 // sound when window just load
 window.onload = () => {
-    if (localStorage.getItem("muted") === "true") {
+    let muted = localStorage.getItem("muted");
+
+    // make mute default
+    if (muted === null) {
+        muted = "true";
+        localStorage.setItem("muted", "true");
+    }
+
+    if (muted === "true") {
         sound.volume = 0;
         playButton.className = "fa-solid fa-volume-xmark";
     } else {
@@ -88,6 +97,36 @@ function playClick(){
         clickSound.play();
     }
 }
+
+// click sound for button that goes to new page
+function playClickPageBtn(event) {
+    event.preventDefault(); // stop instant navigation
+
+    const targetPage = event.currentTarget.getAttribute("data-target");
+
+    // sound on, play the click sound
+    if (playButton.classList.contains("fa-volume-high")) {
+        
+        clickSound.currentTime = 1.4;
+        clickSound.play();
+
+        // start button to welcome page
+        if (targetPage === "welcomingPage.html") {
+            setTimeout(() => {
+            window.location.href = "welcomingPage.html";
+            }, 500);
+        } 
+        // play chapter one button
+        else {
+            window.location.href = targetPage;
+        }
+    } 
+    // sound off, go directly
+    else {
+        window.location.href = targetPage;
+    }
+}
+
 
 function openNamePopUp(){
     namePopUp.classList.add("openPopUp");

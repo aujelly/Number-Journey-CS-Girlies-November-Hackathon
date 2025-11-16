@@ -18,8 +18,8 @@
                 <h2>Number<br>Journey</h2>
             </div>
             <div class="content">
-                    <button onClick="playClick(); window.location.href='welcomingPage.html'">Start</button>
-                    <p>Turn the volume up for the best experience!</p>
+                    <button onClick="playClickPageBtn(event)" data-target="welcomingPage.html">Start</button>
+                    <p>Unmute the volume for the best experience!</p>
             </div>
         </div>
     </main>
@@ -28,7 +28,7 @@
         Your browser does not support the audio element.
     </audio>
 
-    <i id="playButton" class="fa-solid fa-volume-high"></i>
+    <i id="playButton" class="fa-solid fa-volume-xmark"></i>
 </body>
 <script src="script.js"></script>
 </html>
