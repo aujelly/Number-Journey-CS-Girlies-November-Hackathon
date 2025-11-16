@@ -1,4 +1,4 @@
-body .startMenu{
+body{
     background-color: #899729;
     display: flex;
     justify-content: center;
@@ -87,9 +87,55 @@ body .welcomePage{
 }
 
 .welcomeText{
+    font-size: 1.6rem;
+    position: absolute;
+    text-align: left;
+    top: 10%;
+    right: 8%;
     font-family: "Playpen Sans Deva", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     color: #fff5f1;
+    line-height: 1.5;
+}
+
+@media (max-width: 1030px) {
+    .welcomeText {
+        font-size: 1rem;
+        top: 35%;
+        right: 7%;
+    }
+}
+
+@media (max-width: 550px) {
+    .welcomeText {
+        font-size: 0.6rem;
+        top: 40%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .welcomeText {
+        font-size: 0.6rem;
+        top: 37.5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 350px) {
+    .welcomeText {
+        font-size: 0.5rem;
+        top: 40%;
+        right: 5%;
+    }
+}
+
+@media (max-height: 550px) {
+    .welcomeText {
+        font-size: 0.6rem;
+        top: 27%;
+        right: 2%;
+    }
 }
