@@ -38,6 +38,7 @@ function chooseOpenPopUp(){
     }
 }
 
+// sound
 playButton.addEventListener('click', function() {
   if (sound.volume === 0) {
     sound.volume = 1;
@@ -49,6 +50,8 @@ playButton.addEventListener('click', function() {
     playButton.className = "fa-solid fa-volume-xmark";
   }
 });
+
+// type welcome text
 typeText(welcomeText, welcome);
 
 function openNamePopUp(){
@@ -74,5 +77,7 @@ function closeNamePopUp(){
     index = 0; // reset the index back to 0
     welcome.textContent = ""; //remove the welcome text
 
-    typeText(greetingText, greeting);
+    sound.src = "audios/greetingTextAudio.mp3";
+    sound.playbackRate = 1.2;
+    typeText(greetingText, greeting); // type the greeting text
 }
