@@ -9,15 +9,30 @@ body{
 }
 
 .title{
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    color: white;
+    margin: 0;
+}
 
+.title h3{
+    margin: 0;
+}
+
+.content p{
+    margin: 0;
 }
 
 .content button{
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 3px rgb(33, 1, 1);
+    margin-top: 25px;
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: 3px solid rgb(33, 1, 1);
     background-color: white;
     cursor: pointer;
+    margin-bottom: 25px;
 }
 
 .content button a{
@@ -26,3 +41,4 @@ body{
     color: rgb(33, 1, 1);
     font-weight: bold;
 }
+
