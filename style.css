@@ -85,3 +85,11 @@ body .welcomePage{
     width: 100%;
     height: auto;
 }
+
+.welcomeText{
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff5f1;
+}
