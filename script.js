@@ -6,6 +6,9 @@ const welcome = document.getElementById("welcomeText");
 const sound = document.getElementById('mySound');
 const playButton = document.getElementById('playButton');
 let index = 0;
+//namePopUp
+let namePopUp = document.getElementById("namePopUp");
+let playerName = document.getElementById("playerName");
 
 function typeText(text, element){
     if(index < text.length){
@@ -20,7 +23,7 @@ function typeText(text, element){
         setTimeout(() => typeText(text, element), 60);
     }
     else{
-        console.log("HEy");
+        openPopUp();
     }
 }
 
@@ -36,3 +39,19 @@ playButton.addEventListener('click', function() {
   }
 });
 typeText(welcomeText, welcome);
+
+function openPopUp(){
+    namePopUp.classList.add("openPopUp");
+}
+
+function closeNamePopUp(){
+    //make sure player enters one char
+    const name = playerName.value.trim();
+    if(name.length < 1){
+        alert("Please enter at least one character!");
+        return;
+    }
+
+    namePopUp.classList.remove("openPopUp");
+    welcome.textContent = ""; //remove the welcome text
+}
