@@ -1,8 +1,8 @@
-//welcome page
+//WELCOME PAGE
+//welcome text
 const welcomeText = "Hello there, traveller!\nYou've just arrived at the edge of a magical world.\nBefore you begin, what should everyone call you?"
 const welcome = document.getElementById("welcomeText");
 //welcome audio
-//const welcomeAudio = new Audio("audios/welcomeTextAudio.mp3");
 const sound = document.getElementById('mySound');
 const playButton = document.getElementById('playButton');
 let index = 0;
@@ -11,6 +11,9 @@ let namePopUp = document.getElementById("namePopUp");
 let playerName = document.getElementById("playerName");
 //overlay
 const overlay = document.getElementById("overlay");
+//greeting text
+const greetingText = "Wonderful! It is nice to meet you.\nThe road is full of friends who need your help.\nAre you ready to start your first journey?"
+const greeting = document.getElementById("greetingText");
 
 function typeText(text, element){
     if(index < text.length){
@@ -25,7 +28,13 @@ function typeText(text, element){
         setTimeout(() => typeText(text, element), 60);
     }
     else{
-        openPopUp();
+        chooseOpenPopUp();
+    }
+}
+
+function chooseOpenPopUp(){
+    if(welcome.textContent != ""){
+        openNamePopUp();
     }
 }
 
@@ -42,7 +51,7 @@ playButton.addEventListener('click', function() {
 });
 typeText(welcomeText, welcome);
 
-function openPopUp(){
+function openNamePopUp(){
     namePopUp.classList.add("openPopUp");
     //add the overlay
     overlay.style.visibility = "visible";
@@ -61,5 +70,9 @@ function closeNamePopUp(){
     //make the overlay invisible
     overlay.style.opacity = "0";
     overlay.style.visibility = "hidden";
+
+    index = 0; // reset the index back to 0
     welcome.textContent = ""; //remove the welcome text
+
+    typeText(greetingText, greeting);
 }
