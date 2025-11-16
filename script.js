@@ -111,12 +111,17 @@ function playClickPageBtn(event) {
         clickSound.play();
 
         // start button to welcome page
-        if (targetPage === "welcomingPage.html") {
+        if (targetPage === "welcomingPage.html"){
             setTimeout(() => {
             window.location.href = "welcomingPage.html";
             }, 500);
         } 
         // play chapter one button
+        else if(targetPage === "chapterOne.html"){
+            setTimeout(() => {
+            window.location.href = "chapterOne.html";
+            }, 500);
+        }
         else {
             window.location.href = targetPage;
         }
@@ -170,9 +175,4 @@ function removeOverlay(){
 function openChapterPopUp(){
     chapterOnePopUp.classList.add("openPopUp");
     addOverlay();
-}
-
-function closeChapterPopUp(){
-    chapterOnePopUp.classList.remove("openPopUp");
-    removeOverlay();
 }
