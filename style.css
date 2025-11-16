@@ -116,6 +116,65 @@ body .welcomePage{
     border-radius: 10px;
 }
 
+.namePopUp{
+    width: 350px;
+    background: #8c5831;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px 8px;
+    transform: translate(-50%, -50%);
+    border: 3px solid #52251b;
+    text-align: center;
+}
+
+.namePopUp h3{
+    margin: 0;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff5f1;
+    text-align: left;
+    padding-left: 42px;
+}
+
+input{
+    font-size: 1rem;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff5f1;
+    color: #2D0B03;
+    border-radius: 5px;
+    width: 260px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.namePopUp button{
+    display: inline-block;
+    padding: 0px 30px;
+    border-radius: 10px;
+    border: 3px solid #2D0B03;
+    background-color: #471305;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-weight: 600;
+}
+
+.namePopUp button:hover{
+    transform: rotate(-3deg);
+    background-color: #000000;;
+}
+
 @media (max-width: 1030px) {
     .welcomeText {
         font-size: 1rem;
