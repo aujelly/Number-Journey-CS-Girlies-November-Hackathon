@@ -1,5 +1,5 @@
 body{
-    background-color: #727D2C;
+    background-color: #899729;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,26 +11,34 @@ body{
 .title{
     font-family: "Darumadrop One", sans-serif;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 4rem;
     font-style: normal;
     color: white;
     margin: 0;
+    text-shadow: 3px 4px 0px #3c0d03;
 }
 
 .title h3{
     margin: 0;
+    line-height: 1;
 }
 
 .content p{
+    font-size: 1rem;
     margin: 0;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff5f1;
 }
 
 .content button{
-    margin-top: 25px;
-    padding: 5px 30px;
+    margin-top: 40px;
+    padding: 0px 50px;
     border-radius: 10px;
-    border: 3px solid rgb(33, 1, 1);
-    background-color: white;
+    border: 3px solid #2D0B03;
+    background-color: #471305;
     cursor: pointer;
     margin-bottom: 25px;
 }
@@ -38,7 +46,8 @@ body{
 .content button a{
     font-size: 1.5rem;
     text-decoration: none;
-    color: rgb(33, 1, 1);
-    font-weight: bold;
+    color: #ffffff;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-weight: 600;
 }
 
