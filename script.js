@@ -9,6 +9,8 @@ let index = 0;
 //namePopUp
 let namePopUp = document.getElementById("namePopUp");
 let playerName = document.getElementById("playerName");
+//overlay
+const overlay = document.getElementById("overlay");
 
 function typeText(text, element){
     if(index < text.length){
@@ -42,6 +44,9 @@ typeText(welcomeText, welcome);
 
 function openPopUp(){
     namePopUp.classList.add("openPopUp");
+    //add the overlay
+    overlay.style.visibility = "visible";
+    overlay.style.opacity = "0.5";
 }
 
 function closeNamePopUp(){
@@ -53,5 +58,8 @@ function closeNamePopUp(){
     }
 
     namePopUp.classList.remove("openPopUp");
+    //make the overlay invisible
+    overlay.style.opacity = "0";
+    overlay.style.visibility = "hidden";
     welcome.textContent = ""; //remove the welcome text
 }
