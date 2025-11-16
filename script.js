@@ -35,15 +35,15 @@ function typeText(text, element){
 }
 
 function chooseOpenPopUp(){
-    // wait 2s befor opening the pop up
-    setTimeout(() => {
-        if(welcome.textContent != ""){
+    if(welcome.textContent != ""){
         openNamePopUp();
         }
         else if(greeting.textContent != ""){
-            openChapterPopUp();
+            // wait 1.5s befor opening the pop up
+            setTimeout(() => {
+                openChapterPopUp();
+            }, 1500);
         }
-    }, 1500);
 }
 
 // sound
@@ -88,16 +88,19 @@ function closeNamePopUp(){
     typeText(greetingText, greeting); // type the greeting text
 }
 
+// make overlay visible
 function addOverlay(){
     overlay.style.visibility = "visible";
     overlay.style.opacity = "0.5";
 }
 
+// make overlay hidden
 function removeOverlay(){
     overlay.style.opacity = "0";
     overlay.style.visibility = "hidden";
 }
 
+// chapter pop up
 function openChapterPopUp(){
     chapterOnePopUp.classList.add("openPopUp");
     addOverlay();
