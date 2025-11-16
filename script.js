@@ -16,10 +16,16 @@ let playerName = document.getElementById("playerName");
 // overlay
 const overlay = document.getElementById("overlay");
 // greeting text
-const greetingText = "Wonderful! It is nice to meet you.\nThe road is full of friends who need your help.\nAre you ready to start your first journey?"
+const greetingText = "Wonderful! It's nice to meet you.\nThe road is full of friends who need your help.\nAre you ready to start your first journey?"
 const greeting = document.getElementById("greetingText");
 // chapter PopUp
 const chapterOnePopUp = document.getElementById("chapterOnePopUp");
+
+// CHAPTER ONE PAGE
+// opening text
+const openingTextQ1first = "Oh! Hello traveller! I'm Bop.\nMy best friend Pip the bunny went to collect berries, but I can't find the path he took!";
+const openingTextQ1second = "I'm not so good with numbers... Could you help me count the way?"
+const openingQ1 = document.getElementById("openingTextQ1");
 
 function typeText(text, element){
     if (!element){
