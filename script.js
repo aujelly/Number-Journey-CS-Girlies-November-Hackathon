@@ -23,7 +23,7 @@ const chapterOnePopUp = document.getElementById("chapterOnePopUp");
 
 // CHAPTER ONE PAGE
 // opening text
-const openingTextQ1first = "Oh! Hello traveller! I'm Bop.\nMy best friend Pip the bunny went to collect berries, but I can't find the path he took!";
+const openingTextQ1first = "Oh! Hello traveller! I'm Bop.\nMy best friend Pip the bunny went to collect berries,\nbut I can't find the path he took!";
 const openingTextQ1second = "I'm not so good with numbers... Could you help me count the way?"
 const openingQ1 = document.getElementById("openingTextQ1");
 
@@ -138,7 +138,7 @@ function playClickPageBtn(event) {
     }
 }
 
-
+// name pop up
 function openNamePopUp(){
     namePopUp.classList.add("openPopUp");
     // add the overlay
@@ -182,3 +182,6 @@ function openChapterPopUp(){
     chapterOnePopUp.classList.add("openPopUp");
     addOverlay();
 }
+
+// type Q1 opening text
+typeText(openingTextQ1first, openingQ1);
