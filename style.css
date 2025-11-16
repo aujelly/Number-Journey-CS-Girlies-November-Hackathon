@@ -53,7 +53,7 @@ body{
     background-color: #2D0B03;;
 }
 
-body.welcomePage{
+body.imageBgPage{
     margin: 0;
     height: 100vh;
     background-color: black;
@@ -63,7 +63,7 @@ body.welcomePage{
     flex-direction: column;
 }
 
-.welcomeBackground{
+.background{
     position: fixed;
     top: 0;
     left: 0;
