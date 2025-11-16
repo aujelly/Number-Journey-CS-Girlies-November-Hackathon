@@ -1,3 +1,6 @@
+// START PAGE
+clickSound = new Audio("audios/pickSoundEffect.mp3");
+
 // WELCOME PAGE
 // welcome text
 const welcomeText = "Hello there, traveller!\nYou've just arrived at the edge of a magical world.\nBefore you begin, what should everyone call you?"
@@ -18,6 +21,9 @@ const greeting = document.getElementById("greetingText");
 const chapterOnePopUp = document.getElementById("chapterOnePopUp");
 
 function typeText(text, element){
+    if (!element){
+        return;
+    }
     if(index < text.length){
         let char = text[index];
         if(char === "\n"){
@@ -46,21 +52,42 @@ function chooseOpenPopUp(){
         }
 }
 
-// sound
+// sound button
 playButton.addEventListener('click', function() {
   if (sound.volume === 0) {
     sound.volume = 1;
     // change the icon to pause
     playButton.className = "fa-solid fa-volume-high";
+    localStorage.setItem("muted", "false");
   } else {
     sound.volume = 0;
     // change the icon to play
     playButton.className = "fa-solid fa-volume-xmark";
+    localStorage.setItem("muted", "true");
   }
 });
 
+// sound when window just load
+window.onload = () => {
+    if (localStorage.getItem("muted") === "true") {
+        sound.volume = 0;
+        playButton.className = "fa-solid fa-volume-xmark";
+    } else {
+        sound.volume = 1;
+        playButton.className = "fa-solid fa-volume-high";
+    }
+}
+
 // type welcome text
 typeText(welcomeText, welcome);
+
+// play button click sound
+function playClick(){
+    if(playButton.className === "fa-solid fa-volume-high"){
+        clickSound.currentTime = 1.4; // play from 1.4s because its where the sound is
+        clickSound.play();
+    }
+}
 
 function openNamePopUp(){
     namePopUp.classList.add("openPopUp");

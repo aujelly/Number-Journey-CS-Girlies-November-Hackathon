@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="startMenu">
     <main>
@@ -17,10 +18,17 @@
                 <h2>Number<br>Journey</h2>
             </div>
             <div class="content">
-                    <button><a href="welcomingPage.html">Start</a></button>
+                    <button onClick="playClick(); window.location.href='welcomingPage.html'">Start</button>
                     <p>Turn the volume up for the best experience!</p>
             </div>
         </div>
-        </main>
+    </main>
+
+    <audio id="mySound" autoplay>
+        Your browser does not support the audio element.
+    </audio>
+
+    <i id="playButton" class="fa-solid fa-volume-high"></i>
 </body>
+<script src="script.js"></script>
 </html>

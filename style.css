@@ -41,9 +41,6 @@ body{
     background-color: #471305;
     cursor: pointer;
     margin-bottom: 25px;
-}
-
-.content button a{
     font-size: 1.5rem;
     text-decoration: none;
     color: #ffffff;
