@@ -83,7 +83,7 @@ body.imageBgPage{
     height: auto;
 }
 
-.welcomeText{
+.text{
     font-size: 1.6rem;
     position: absolute;
     text-align: left;
@@ -215,7 +215,7 @@ input{
 }
 
 @media (max-width: 1030px) {
-    .welcomeText {
+    .text {
         font-size: 1rem;
         top: 31%;
         right: 7%;
@@ -223,7 +223,7 @@ input{
 }
 
 @media (max-width: 550px) {
-    .welcomeText {
+    .text {
         font-size: 0.6rem;
         top: 40%;
         right: 5%;
@@ -231,7 +231,7 @@ input{
 }
 
 @media (max-width: 400px) {
-    .welcomeText {
+    .text {
         font-size: 0.6rem;
         top: 37.5%;
         right: 5%;
@@ -239,7 +239,7 @@ input{
 }
 
 @media (max-width: 350px) {
-    .welcomeText {
+    .text {
         font-size: 0.5rem;
         top: 40%;
         right: 5%;
@@ -247,7 +247,7 @@ input{
 }
 
 @media (max-height: 550px) {
-    .welcomeText {
+    .text {
         font-size: 0.6rem;
         top: 27%;
         right: 2%;
