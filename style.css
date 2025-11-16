@@ -1,0 +1,28 @@
+body{
+    background-color: #727D2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.title{
+
+}
+
+.content button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 3px rgb(33, 1, 1);
+    background-color: white;
+    cursor: pointer;
+}
+
+.content button a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(33, 1, 1);
+    font-weight: bold;
+}
