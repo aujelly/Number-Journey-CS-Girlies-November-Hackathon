@@ -65,6 +65,8 @@ function chooseFunction(element){
         // print the second part
         index = 0;
         openingQ1First.textContent = "";
+        sound.src = "audios/chapter1Q1_Part2.mp3";
+        sound.playbackRate = 1.2;
         typeText(openingTextQ1second, openingQ1Second);
     }
 }
@@ -194,4 +196,5 @@ function openChapterPopUp(){
 }
 
 // type Q1 opening text
+sound.playbackRate = 1.2;
 typeText(openingTextQ1first, openingQ1First);
