@@ -54,7 +54,7 @@ function chooseFunction(element){
         openNamePopUp();
     }
     else if(element === greeting){
-        // wait 1.5s befor opening the pop up
+        // wait 1.5s before opening the pop up
         setTimeout(() => {
             openChapterPopUp();
         }, 1200);
@@ -64,10 +64,11 @@ function chooseFunction(element){
 
         // print the second part
         index = 0;
-        openingQ1First.textContent = "";
-        sound.src = "audios/chapter1Q1_Part2.mp3";
-        sound.playbackRate = 1.2;
-        typeText(openingTextQ1second, openingQ1Second);
+        setTimeout(() => {
+            openingQ1First.textContent = "";
+            sound.src = "audios/chapter1Q1_Part2.mp3";
+            typeText(openingTextQ1second, openingQ1Second);
+        }, 2500);
     }
 }
 
@@ -196,5 +197,4 @@ function openChapterPopUp(){
 }
 
 // type Q1 opening text
-sound.playbackRate = 1.2;
 typeText(openingTextQ1first, openingQ1First);
