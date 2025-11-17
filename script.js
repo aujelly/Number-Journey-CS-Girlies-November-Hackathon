@@ -24,9 +24,10 @@ const chapterOnePopUp = document.getElementById("chapterOnePopUp");
 // CHAPTER ONE PAGE
 // opening text
 const openingTextQ1first = "Oh! Hello traveller! I'm Bop.\nMy best friend Pip the bunny went to collect berries,\nbut I can't find the path he took!";
-const openingTextQ1second = "I'm not so good with numbers... Could you help me count the way?"
+const openingTextQ1second = "I'm not so good with numbers...\nCould you help me count the way?"
 const openingQ1First = document.getElementById("openingTextQ1First");
 const openingQ1Second = document.getElementById("openingTextQ1Second");
+let isFinishedTyping = false;
 
 function typeText(text, element){
     if (!element){
@@ -44,24 +45,26 @@ function typeText(text, element){
         setTimeout(() => typeText(text, element), 60);
     }
     else{
-        chooseFunction();
+        chooseFunction(element);
     }
 }
 
-function chooseFunction(){
-    if(welcome.textContent !== ""){
+function chooseFunction(element){
+    if(element === welcome){
         openNamePopUp();
-        }
-    else if(greeting.textContent !== ""){
+    }
+    else if(element === greeting){
         // wait 1.5s befor opening the pop up
         setTimeout(() => {
             openChapterPopUp();
         }, 1200);
     }
-    //HEREEE
-    else if(openingQ1First.textContent !== ""){
-        index = 0; // reset the index back to 0
-        openingQ1.textContent = ""; // remove the welcome text
+    else if(element === openingQ1First){
+        isFinishedTyping = true;
+
+        // print the second part
+        index = 0;
+        openingQ1First.textContent = "";
         typeText(openingTextQ1second, openingQ1Second);
     }
 }
