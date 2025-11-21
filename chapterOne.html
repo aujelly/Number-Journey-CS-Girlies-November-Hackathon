@@ -25,6 +25,19 @@
         Your browser does not support the audio element.
     </audio>
 
+    <div id="overlay"></div>
+    <div class="popUp" id="chapterQuestionPopUp">
+            <h3>Question 1</h3>
+            <p id="questions"></p>
+            <img src="" alt="a tree">
+            <!--the choices-->
+            <div class="answerChoices">
+                <button onClick="playClick(); closeQuestionPopUp()" id="choice1"></button>
+                <button onClick="playClick(); closeQuestionPopUp()" id="choice2"></button>
+                <button onClick="playClick(); closeQuestionPopUp()" id="choice3"></button>
+            </div>
+    </div>
+
     <i id="playButton"></i>
 </body>
 <script src="script.js"></script>

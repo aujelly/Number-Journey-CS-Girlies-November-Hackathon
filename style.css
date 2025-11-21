@@ -111,6 +111,7 @@ body.imageBgPage{
     color: #fff8e6;
     font-size: 30px;
     border-radius: 10px;
+    z-index: 998;
 }
 
 .popUp{
@@ -144,7 +145,7 @@ body.imageBgPage{
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 998;
+    z-index: 997;
 }
 
 .popUp h3{

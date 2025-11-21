@@ -28,6 +28,8 @@ const openingTextQ1second = "I'm not so good with numbers...\nCould you help me 
 const openingQ1First = document.getElementById("openingTextQ1First");
 const openingQ1Second = document.getElementById("openingTextQ1Second");
 let isFinishedTyping = false;
+// question pop up
+const chapterQuestionPopUp = document.getElementById("chapterQuestionPopUp");
 
 function typeText(text, element){
     if (!element){
@@ -69,6 +71,9 @@ function chooseFunction(element){
             sound.src = "audios/chapter1Q1_Part2.mp3";
             typeText(openingTextQ1second, openingQ1Second);
         }, 2500);
+    }
+    else if(element === openingQ1Second){
+        openQuestionPopUp();
     }
 }
 
@@ -198,3 +203,13 @@ function openChapterPopUp(){
 
 // type Q1 opening text
 typeText(openingTextQ1first, openingQ1First);
+
+function openQuestionPopUp(){
+    chapterQuestionPopUp.classList.add("openPopUp");
+    addOverlay();
+}
+
+function closeQuestionPopUp(){
+    chapterQuestionPopUp.classList.remove("openPopUp");
+    removeOverlay();
+}
