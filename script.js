@@ -37,6 +37,7 @@ const choice1 = document.getElementById("choice1");
 const choice2 = document.getElementById("choice2");
 const choice3 = document.getElementById("choice3");
 const Q1 = "Bop sees 3 trees on the left and 2 on the right. How many trees are there in total?"
+let rightAns;
 
 function typeText(text, element){
     if (!element){
@@ -219,6 +220,16 @@ function openQuestionPopUp(){
         if(i === 1){
             questionsNo.textContent = number;
             questions.textContent = Q1;
+
+            rightAns = 5;
+            choice1.textContent = getRandomNumber(3, 10, rightAns);
+            choice2.textContent = rightAns;
+            choice3.textContent = getRandomNumber(3, 10, rightAns);
+
+            // making sure that the choices are all different
+            while (choice1.textContent === choice3.textContent) {
+                getRandomNumber(3, 10, rightAns);
+            }
         }
     }
 }
@@ -228,7 +239,11 @@ function closeQuestionPopUp(){
     removeOverlay();
 }
 
-// get random number range from min and max both inclusive
-function getRandomNumber(min, max){
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+// get random number range from min and max both inclusive, as well making sure its not the right answer
+function getRandomNumber(min, max, rightAns){
+    let num;
+    do {
+        num = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (num === rightAns);
+    return num;
 }
