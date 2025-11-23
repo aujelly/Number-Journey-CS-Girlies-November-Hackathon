@@ -216,7 +216,6 @@ function openQuestionPopUp(){
     addOverlay();
     for(let i = 1; i < 4; i++) {
         let number = "Question " + i;
-        let choices = Math.floor(Math.random() * 10) + 1;
         if(i === 1){
             questionsNo.textContent = number;
             questions.textContent = Q1;
@@ -227,4 +226,9 @@ function openQuestionPopUp(){
 function closeQuestionPopUp(){
     chapterQuestionPopUp.classList.remove("openPopUp");
     removeOverlay();
+}
+
+// get random number range from min and max both inclusive
+function getRandomNumber(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
