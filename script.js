@@ -30,6 +30,10 @@ const openingQ1Second = document.getElementById("openingTextQ1Second");
 let isFinishedTyping = false;
 // question pop up
 const chapterQuestionPopUp = document.getElementById("chapterQuestionPopUp");
+const questions = document.getElementById("questions");
+const questionsNo = document.getElementById("questionsNo");
+const responseQ1Text = document.getElementById("responseQ1Text");
+const Q1 = "Bop sees 3 trees on the left and 2 on the right. How many trees are there in total?"
 
 function typeText(text, element){
     if (!element){
@@ -207,6 +211,7 @@ typeText(openingTextQ1first, openingQ1First);
 function openQuestionPopUp(){
     chapterQuestionPopUp.classList.add("openPopUp");
     addOverlay();
+    questions.textContent = Q1;
 }
 
 function closeQuestionPopUp(){
