@@ -171,6 +171,18 @@ body.imageBgPage{
     text-shadow: 3px 3px 0px #3c0d03;
 }
 
+.popUp h5{
+    margin: 0;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff5f1;
+    text-align: center;
+}
+
 .popUp p{
     font-size: 1.2rem;
     font-family: "Playpen Sans Deva", sans-serif;
@@ -207,12 +219,53 @@ input{
     font-size: 1rem;
     color: #ffffff;
     font-family: "Playpen Sans Deva", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .popUp button:hover{
     transform: rotate(-3deg);
     background-color: #000000;;
+}
+
+.imageRow img{
+    max-width: 40%;
+    max-height: auto;
+}
+
+.imageRow{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.plus{
+    font-size: 1.2rem;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff5f1;
+    margin: 0;
+}
+
+#questions{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: "Playpen Sans Deva", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff5f1;
+    margin: 20px 10px 10px 10px;
+}
+
+.answerChoices{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 @media (max-width: 1030px) {

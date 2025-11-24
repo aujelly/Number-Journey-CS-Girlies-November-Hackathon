@@ -28,11 +28,14 @@
 
     <div id="overlay"></div>
     <div class="popUp" id="chapterQuestionPopUp">
-            <h3 id="questionsNo"></h3>
+            <h5 id="questionsNo"></h5>
             <p id="questions"></p>
-            <img src="images/3trees.png" alt="three trees image">
-            <p>+</p>
-            <img src="images/2trees.png" alt="two trees image">
+            <!--images-->
+            <div class="imageRow">
+                <img src="images/3trees.png" alt="three trees image">
+                <p class="plus">+</p>
+                <img src="images/2trees.png" alt="two trees image">
+            </div>
             <!--the choices-->
             <div class="answerChoices">
                 <button onClick="playClick(); closeQuestionPopUp()" id="choice1"></button>
